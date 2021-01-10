@@ -26,9 +26,10 @@ body {
 
 section {
   padding: 1.5rem;
-  margin-bottom: 1rem;
-  //   display: grid;
-  //   gap: 2.5rem;
+  //   margin-bottom: 1rem;
+  background: url("../images/bg-pattern-top-mobile.svg") no-repeat,
+    url("../images/bg-pattern-bottom-mobile.svg") no-repeat;
+  background-position: left top, right bottom;
 }
 
 .top {
@@ -127,6 +128,11 @@ section {
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -135,22 +141,99 @@ section {
 
 // Media Queries
 @media (min-width: 1440px) {
+  section {
+    padding: 3rem 8rem;
+    height: 100vh;
+    text-align: left;
+    background: url("../images/bg-pattern-top-desktop.svg") no-repeat,
+      url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
+    background-size: 45%, 80%;
+    background-position: left top, right bottom;
+  }
+
+  .container {
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 4rem 0 6rem;
+  }
+
   .top {
     display: grid;
-    grid-template-columns: 45% 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    justify-content: center;
+    // align-items: center;
+    align-items: flex-start;
+    text-align: left;
+
+    .top-text {
+      width: 90%;
+      padding-right: 2rem;
+    }
+
+    h1 {
+      color: $dark-magenta;
+      font-size: 2.5rem;
+      line-height: 1;
+      padding-right: 2rem;
+    }
+
+    p {
+      padding: 1.5rem 0;
+      color: $dark-grayish-magenta;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //   padding-top: 0.5rem;
+      padding-top: 0;
+
+      .rate {
+        background: $light-grayish-magenta;
+        padding: 1rem 1rem;
+        // margin: 0.5rem 0;
+        margin: 0 0 1rem;
+        border-radius: 5px;
+        width: 450px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &:nth-child(2) {
+          align-self: center;
+        }
+        &:last-child {
+          align-self: flex-end;
+        }
+
+        p {
+          color: $dark-magenta;
+          padding: unset;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-content: center;
     align-items: center;
 
-    .rate {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .card {
+      &:first-child {
+        align-self: flex-start;
+      }
+      &:last-child {
+        align-self: flex-end;
+      }
     }
-  }
-  .testimonial {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
   }
 }

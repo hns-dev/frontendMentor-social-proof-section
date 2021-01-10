@@ -108,7 +108,6 @@ section {
 
 .testimonial .card .profile-text .name {
   color: white;
-  margin-bottom: 0.3rem;
   font-weight: 500;
 }
 
@@ -142,7 +141,14 @@ section {
   font-weight: 600;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 490px) {
+  .top .top-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1000px) {
   section {
     padding: 3rem 8rem;
     height: 100vh;

@@ -75,17 +75,18 @@ section {
 .testimonial {
   display: grid;
   gap: 1rem;
-  font-size: 12.5px;
+  font-size: 12.7px;
   color: $dark-grayish-magenta;
 
   .card {
     border-radius: 7px;
-    padding: 1rem 2rem 0;
+    // padding: 2rem 0;
 
     .profile {
       display: flex;
       align-items: center;
-      padding: 1rem 1rem 0;
+      // padding: 1rem 1rem 0;
+      padding: 1.5rem 1rem 1.7rem;
     }
 
     img {
@@ -104,8 +105,7 @@ section {
 
       .name {
         color: $white;
-        // margin-bottom: 0.1rem;
-        font-weight: 500;
+        font-weight: 600;
       }
 
       .info {
@@ -114,8 +114,9 @@ section {
     }
 
     p {
-      padding: 1.5rem 1rem 0.5rem;
-      line-height: 1.7;
+      // padding: 1.5rem 1rem 0.5rem;
+      padding: 0 1rem 1rem;
+      line-height: 1.8;
     }
 
     background: $dark-magenta;
@@ -145,15 +146,19 @@ section {
     .top-text {
       //   padding: 0 2rem;
       width: 80%;
-      margin: 0 auto;
+      // margin: 0 auto;
     }
   }
 }
 
 @media (min-width: 1000px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
   section {
     padding: 3rem 8rem;
-    height: 100vh;
+    height: 100%;
     text-align: left;
     background: url("../images/bg-pattern-top-desktop.svg") no-repeat,
       url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
@@ -181,7 +186,7 @@ section {
 
     .top-text {
       width: 90%;
-      padding-right: 2rem;
+      padding-right: 3rem;
     }
 
     h1 {
@@ -200,18 +205,18 @@ section {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      //   padding-top: 0.5rem;
       padding-top: 0;
 
       .rate {
         background: $light-grayish-magenta;
         padding: 1rem 1rem;
-        // margin: 0.5rem 0;
         margin: 0 0 1rem;
         border-radius: 5px;
-        width: 450px;
-        display: flex;
-        justify-content: space-around;
+        // width: 450px;
+        width: 470px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-content: space-between;
         align-items: center;
 
         &:nth-child(2) {
@@ -219,6 +224,10 @@ section {
         }
         &:last-child {
           align-self: flex-end;
+        }
+
+        .stars {
+          justify-self: center;
         }
 
         p {
@@ -236,6 +245,7 @@ section {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    font-size: 13.5px;
 
     .card {
       &:first-child {
@@ -243,6 +253,11 @@ section {
       }
       &:last-child {
         align-self: flex-end;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
       }
     }
   }

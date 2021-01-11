@@ -69,13 +69,12 @@ section {
   display: -ms-grid;
   display: grid;
   gap: 1rem;
-  font-size: 12.5px;
+  font-size: 12.7px;
   color: #937b92;
 }
 
 .testimonial .card {
   border-radius: 7px;
-  padding: 1rem 2rem 0;
   background: #502050;
   color: #f7f2f7;
   padding: 1rem;
@@ -88,7 +87,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 1rem 0;
+  padding: 1.5rem 1rem 1.7rem;
 }
 
 .testimonial .card img {
@@ -108,7 +107,7 @@ section {
 
 .testimonial .card .profile-text .name {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .testimonial .card .profile-text .info {
@@ -116,8 +115,8 @@ section {
 }
 
 .testimonial .card p {
-  padding: 1.5rem 1rem 0.5rem;
-  line-height: 1.7;
+  padding: 0 1rem 1rem;
+  line-height: 1.8;
 }
 
 .attribution {
@@ -144,14 +143,17 @@ section {
 @media (min-width: 490px) {
   .top .top-text {
     width: 80%;
-    margin: 0 auto;
   }
 }
 
 @media (min-width: 1000px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
   section {
     padding: 3rem 8rem;
-    height: 100vh;
+    height: 100%;
     text-align: left;
     background: url("../images/bg-pattern-top-desktop.svg") no-repeat, url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
     background-size: 45%, 80%;
@@ -183,7 +185,7 @@ section {
   }
   .top .top-text {
     width: 90%;
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
   .top h1 {
     color: #502050;
@@ -213,12 +215,14 @@ section {
     padding: 1rem 1rem;
     margin: 0 0 1rem;
     border-radius: 5px;
-    width: 450px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    width: 470px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -231,6 +235,10 @@ section {
   .top .rating .rate:last-child {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .top .rating .rate .stars {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .top .rating .rate p {
     color: #502050;
@@ -249,6 +257,7 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-size: 13.5px;
   }
   .testimonial .card:first-child {
     -ms-flex-item-align: start;
@@ -257,6 +266,10 @@ section {
   .testimonial .card:last-child {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .testimonial .card img {
+    width: 50px;
+    height: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

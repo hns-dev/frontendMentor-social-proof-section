@@ -80,12 +80,10 @@ section {
 
   .card {
     border-radius: 7px;
-    // padding: 2rem 0;
 
     .profile {
       display: flex;
       align-items: center;
-      // padding: 1rem 1rem 0;
       padding: 1.5rem 1rem 1.7rem;
     }
 
@@ -114,7 +112,6 @@ section {
     }
 
     p {
-      // padding: 1.5rem 1rem 0.5rem;
       padding: 0 1rem 1rem;
       line-height: 1.8;
     }
@@ -132,21 +129,47 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
-  margin-top: 1rem;
+  padding: 2rem 0 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
   font-weight: 600;
 }
 
-// Media Queries
 @media (min-width: 490px) {
+  section {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 591px) {
+  section {
+    padding: 1.5rem 4rem;
+  }
   .top {
     .top-text {
-      //   padding: 0 2rem;
       width: 80%;
-      // margin: 0 auto;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 925px) {
+  section {
+    padding: 1.5rem 6rem;
+  }
+  .top {
+    .top-text {
+      width: 70%;
+      margin: 0 auto;
     }
   }
 }
@@ -156,13 +179,14 @@ section {
     height: 100vh;
     overflow: hidden;
   }
+
   section {
-    padding: 3rem 8rem;
+    padding: 3rem 4rem;
     height: 100%;
     text-align: left;
     background: url("../images/bg-pattern-top-desktop.svg") no-repeat,
       url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
-    background-size: 45%, 80%;
+    background-size: 42%, 78%;
     background-position: left top, right bottom;
   }
 
@@ -171,29 +195,28 @@ section {
     height: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    padding: 4rem 0 6rem;
+    grid-template-rows: 49% 51%;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2rem 0 2rem;
   }
 
   .top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 2.5rem;
     justify-content: center;
-    // align-items: center;
     align-items: flex-start;
     text-align: left;
 
     .top-text {
-      width: 90%;
-      padding-right: 3rem;
+      width: 100%;
     }
 
     h1 {
       color: $dark-magenta;
-      font-size: 2.5rem;
+      font-size: 2rem;
       line-height: 1;
-      padding-right: 2rem;
     }
 
     p {
@@ -209,8 +232,8 @@ section {
 
       .rate {
         background: $light-grayish-magenta;
-        padding: 1rem 1rem;
-        margin: 0 0 1rem;
+        padding: 1.2rem 1rem;
+        margin: 0 0 1.2rem;
         border-radius: 5px;
         // width: 450px;
         width: 470px;
@@ -246,19 +269,61 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 13.5px;
+    // height: 80%;
 
     .card {
+      height: 100%;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1188px) {
+  section {
+    padding: 3rem 8rem;
+  }
+
+  .top {
+    gap: 4rem;
+
+    .top-text {
+      h1 {
+        font-size: 2.5rem;
+        padding-right: 2rem;
+      }
+
+      // width: 90%;
+      // padding-right: 3rem;
+    }
+  }
+
+  .testimonial {
+    height: 80%;
+
+    .card {
+      height: unset;
       &:first-child {
         align-self: flex-start;
       }
       &:last-child {
         align-self: flex-end;
       }
+    }
+  }
+}
 
-      img {
-        width: 50px;
-        height: 50px;
+@media (min-width: 1284px) {
+  .top {
+    .top-text {
+      h1 {
+        font-size: 3rem;
+        padding-right: 3rem;
       }
+      padding-right: 3rem;
     }
   }
 }

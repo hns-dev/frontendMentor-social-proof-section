@@ -122,20 +122,6 @@ section {
   }
 }
 
-// Footer
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0 0;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-  font-weight: 600;
-}
-
 @media (min-width: 490px) {
   section {
     padding: 1.5rem 3rem;
